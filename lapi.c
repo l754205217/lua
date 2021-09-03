@@ -58,13 +58,6 @@ const char lua_ident[] =
 ** Non-valid indices return the special nil value 'G(L)->nilvalue'.
 */
 static TValue *index2value (lua_State *L, int idx) {
-  int *a,*aa;
-  int b,c;
-  b = *a;
-  b = *aa;
-  c = 1/0;
-  1/0;
-  
   CallInfo *ci = L->ci;
   if (idx > 0) {
     StkId o = ci->func + idx;
